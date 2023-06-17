@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector('.gallery') // Отримуємо доступ тегу ul через class="gallery"
+
+
+const markup = images.map((image) => `<li class='image'><img src="${image.url}" alt="${image.alt} width="200" height="200""></li>`).join('');
+// Ітеруєммо масив обєктів за допомогою функції map підставляючи атрибути url та alt та обєдмуємо їх в рядок за допомогою метода join
+//! Додатково задав ширину та висоту картинкам 
+
+listEl.insertAdjacentHTML('beforeend', markup); // Додаємо наш рядок з атрибутами HTML за допомогою метода insertAdjacentHTML 
