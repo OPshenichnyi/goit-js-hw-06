@@ -5,8 +5,9 @@ const typeColor = document.querySelector('.color'); // Знаходимо еле
 btnChangeColor.addEventListener('click', handlerChange); //Додаємо слухача подій на елемент button та передаємо в функцію обробник події
 
 function handlerChange(evt) { // Сворюємо функцію що буде оброблювати події отримані від слухача 
-  body.style.background = `${getRandomHexColor()}`; // Задаємо значення  background в стилі елементу body звертаючись до функції getRandomHexColor 
-  typeColor.textContent = `${getRandomHexColor()}`; // Задаємо значення textContent в елементі span звертаючись до функції getRandomHexColor
+  let colorRandom = `${getRandomHexColor()}`; // Задаємо значення  background в змінну звертаючись до функції getRandomHexColor 
+  body.style.background = colorRandom; // Задаємо значення  background в стилі елементу body 
+  typeColor.textContent = colorRandom; // Задаємо значення textContent в елементі span 
 };
 
 function getRandomHexColor() { // Функція що рандомно генерує код кольору в форматі HEX

@@ -37,8 +37,3 @@ function getRandomHexColor() { // Функція рандомного вибор
 
 
 
-
-
-
-
-
